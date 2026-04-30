@@ -8,6 +8,7 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
+// Note: /admin uses Arial directly via inline font-family (matches the bridge OF design system).
 
 export const metadata: Metadata = {
   title: "OF Formation — La formation bancaire et financière, conçue pour être comprise",

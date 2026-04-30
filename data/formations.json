@@ -1,0 +1,198 @@
+[
+  {
+    "slug": "dda-15h-assurance-vie",
+    "qualiobee_uuid": "3686c1a7-902e-4af0-8cb2-32cfaeb31d21",
+    "specialtyCode": "DDA-15H",
+    "certifType": "NONE",
+    "certifLevel": "RNCP0",
+
+    "identification": {
+      "title": "DDA 15h - Assurance Vie",
+      "shortDescription": "Formation continue obligatoire DDA pour intermédiaires en assurance-vie. 15 heures réglementaires annuelles.",
+      "badge": null,
+      "tagline": null
+    },
+
+    "_ind1_publicInfo": {
+      "duration_hours": 15,
+      "modality": "e-learning",
+      "modalityDetail": null,
+      "language": "fr",
+      "deliveryStart": "immediate",
+      "deliveryStartDetail": null,
+      "audience": null,
+      "format": null
+    },
+
+    "_ind5_objectives": {
+      "main": null,
+      "operational": []
+    },
+
+    "_ind8_prerequisites": {
+      "regulatory": null,
+      "professional": null,
+      "technical": null,
+      "items": []
+    },
+
+    "_program": {
+      "intro": null,
+      "modules": []
+    },
+
+    "_ind6_19_pedagogy": {
+      "methods": [],
+      "tools": [],
+      "supports": [],
+      "synchronous": false,
+      "asynchronous": true,
+      "tutoring": null,
+      "accessDuration": null
+    },
+
+    "_ind11_evaluation": {
+      "modalities": [],
+      "passingScore": null,
+      "certifyingExam": null,
+      "certificateDelivered": "Attestation de formation",
+      "feedback": null
+    },
+
+    "_ind1_pricing": {
+      "amountHT": null,
+      "taxRate": 20,
+      "amountTTC": null,
+      "currency": "EUR",
+      "perPerson": true,
+      "discountPolicy": null,
+      "fundingOPCO": true,
+      "fundingCPF": false,
+      "fundingFNE": false,
+      "fundingDetails": null
+    },
+
+    "_ind26_accessibility": {
+      "referent": null,
+      "referentEmail": null,
+      "accommodations": [],
+      "partners": []
+    },
+
+    "_ind2_results": {
+      "satisfactionRate": null,
+      "completionRate": null,
+      "successRate": null,
+      "learnersTrained": null,
+      "lastUpdate": null,
+      "scope": "Sur 12 derniers mois"
+    },
+
+    "_ind30_32_improvement": {
+      "feedbackProcess": null,
+      "lastReview": null,
+      "correctiveActions": []
+    },
+
+    "_trainers": [],
+
+    "_meta": {
+      "frappe_lms_course": "dda-15h-assurance-vie",
+      "qualiobee_externalId": "dda-15h-assurance-vie",
+      "synced_at": "2026-04-29T08:28:19.883Z",
+      "published": false,
+      "createdAt": "2026-04-29T08:28:19.883Z",
+      "updatedAt": null
+    }
+  },
+  {
+    "slug": "dda-15h-v29-04",
+    "qualiobee_uuid": "f0f4b20e-bf01-480a-b131-c862fd660736",
+    "specialtyCode": "DDA-15H",
+    "certifType": "NONE",
+    "certifLevel": "RNCP0",
+
+    "identification": {
+      "title": "DDA 15h - v29/04",
+      "shortDescription": "Test",
+      "badge": null,
+      "tagline": null
+    },
+
+    "_ind1_publicInfo": {
+      "duration_hours": 15,
+      "modality": "e-learning",
+      "modalityDetail": null,
+      "language": "fr",
+      "deliveryStart": "immediate",
+      "deliveryStartDetail": null,
+      "audience": null,
+      "format": null
+    },
+
+    "_ind5_objectives": { "main": null, "operational": [] },
+    "_ind8_prerequisites": { "regulatory": null, "professional": null, "technical": null, "items": [] },
+    "_program": { "intro": null, "modules": [] },
+    "_ind6_19_pedagogy": { "methods": [], "tools": [], "supports": [], "synchronous": false, "asynchronous": true, "tutoring": null, "accessDuration": null },
+    "_ind11_evaluation": { "modalities": [], "passingScore": null, "certifyingExam": null, "certificateDelivered": "Attestation de formation", "feedback": null },
+    "_ind1_pricing": { "amountHT": null, "taxRate": 20, "amountTTC": null, "currency": "EUR", "perPerson": true, "discountPolicy": null, "fundingOPCO": true, "fundingCPF": false, "fundingFNE": false, "fundingDetails": null },
+    "_ind26_accessibility": { "referent": null, "referentEmail": null, "accommodations": [], "partners": [] },
+    "_ind2_results": { "satisfactionRate": null, "completionRate": null, "successRate": null, "learnersTrained": null, "lastUpdate": null, "scope": "Sur 12 derniers mois" },
+    "_ind30_32_improvement": { "feedbackProcess": null, "lastReview": null, "correctiveActions": [] },
+    "_trainers": [],
+
+    "_meta": {
+      "frappe_lms_course": "dda-15h-v29-04",
+      "qualiobee_externalId": "dda-15h-v29-04",
+      "synced_at": null,
+      "published": false,
+      "createdAt": null,
+      "updatedAt": null
+    }
+  },
+  {
+    "slug": "a-guide-to-frappe-learning",
+    "qualiobee_uuid": "6fdda501-5635-4e33-a642-3c5009f7af5e",
+    "specialtyCode": "DDA-15H",
+    "certifType": "NONE",
+    "certifLevel": "RNCP0",
+
+    "identification": {
+      "title": "A guide to Frappe Learning",
+      "shortDescription": "Learn the basics of Frappe Learning and how to get started with your very first course.",
+      "badge": null,
+      "tagline": null
+    },
+
+    "_ind1_publicInfo": {
+      "duration_hours": null,
+      "modality": "e-learning",
+      "modalityDetail": null,
+      "language": "fr",
+      "deliveryStart": "immediate",
+      "deliveryStartDetail": null,
+      "audience": null,
+      "format": null
+    },
+
+    "_ind5_objectives": { "main": null, "operational": [] },
+    "_ind8_prerequisites": { "regulatory": null, "professional": null, "technical": null, "items": [] },
+    "_program": { "intro": null, "modules": [] },
+    "_ind6_19_pedagogy": { "methods": [], "tools": [], "supports": [], "synchronous": false, "asynchronous": true, "tutoring": null, "accessDuration": null },
+    "_ind11_evaluation": { "modalities": [], "passingScore": null, "certifyingExam": null, "certificateDelivered": "Attestation de formation", "feedback": null },
+    "_ind1_pricing": { "amountHT": null, "taxRate": 20, "amountTTC": null, "currency": "EUR", "perPerson": true, "discountPolicy": null, "fundingOPCO": true, "fundingCPF": false, "fundingFNE": false, "fundingDetails": null },
+    "_ind26_accessibility": { "referent": null, "referentEmail": null, "accommodations": [], "partners": [] },
+    "_ind2_results": { "satisfactionRate": null, "completionRate": null, "successRate": null, "learnersTrained": null, "lastUpdate": null, "scope": "Sur 12 derniers mois" },
+    "_ind30_32_improvement": { "feedbackProcess": null, "lastReview": null, "correctiveActions": [] },
+    "_trainers": [],
+
+    "_meta": {
+      "frappe_lms_course": "a-guide-to-frappe-learning",
+      "qualiobee_externalId": "a-guide-to-frappe-learning",
+      "synced_at": null,
+      "published": false,
+      "createdAt": null,
+      "updatedAt": null
+    }
+  }
+]

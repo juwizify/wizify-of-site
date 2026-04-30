@@ -1,0 +1,56 @@
+{
+  "_comment": "Mentions Qualiopi globales (non par formation). À hardcoder dans le site quand renseignées. Le dashboard /admin lit ce fichier pour calculer la complétude site-wide.",
+  "organism": {
+    "legalName": null,
+    "siret": null,
+    "ndaNumber": null,
+    "vat": null,
+    "address": null,
+    "phone": null,
+    "email": null,
+    "directorName": null,
+    "host": "Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis"
+  },
+
+  "qualiopiCertif": {
+    "certifiedSince": null,
+    "certifBody": null,
+    "scope": "Actions de formation",
+    "logoUrl": null,
+    "publicCertificateUrl": null
+  },
+
+  "_ind26_handicap": {
+    "referentName": null,
+    "referentEmail": null,
+    "referentPhone": null,
+    "policy": null,
+    "partnersList": ["Agefiph", "Cap Emploi", "MDPH"]
+  },
+
+  "_ind31_complaints": {
+    "contactEmail": null,
+    "responseSLA": null,
+    "procedureUrl": null
+  },
+
+  "_ind2_globalResults": {
+    "satisfactionRateGlobal": null,
+    "completionRateGlobal": null,
+    "learnersTrainedTotal": null,
+    "lastUpdate": null,
+    "scope": "Sur 12 derniers mois"
+  },
+
+  "_ind30_32_improvement": {
+    "lastReviewDate": null,
+    "correctiveActions": [],
+    "publicReviewUrl": null
+  },
+
+  "_legal": {
+    "cgvUrl": "/mentions",
+    "rgpdUrl": "/mentions",
+    "rulesUrl": "/mentions"
+  }
+}
