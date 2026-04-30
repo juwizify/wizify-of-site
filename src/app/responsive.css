@@ -1,0 +1,190 @@
+/* ----------------------------------------------------------------------
+   Responsive overrides for Penpot-generated pages.
+   The generated TSX uses inline pixel styles from the .pen JSON.
+   These rules cascade on top, targeting frames by their data-name.
+   Stacked from widest to narrowest breakpoint.
+   ---------------------------------------------------------------------- */
+
+/* ----- Top-level page wrapper: full viewport, no max ----- */
+/* Inline width "1440px" from .pen is overridden so colored sections (Pédagogie,
+   Avant/Après, Pour Qui, Newsletter, Footer…) extend edge-to-edge.
+   Inner content stays centered around 1100-1200 via parent's alignItems: center. */
+[data-name^="OF \2014"] {
+  width: 100% !important;
+  margin-inline: auto;
+  overflow-x: hidden;
+}
+
+/* ----- Inner content rows shrink with viewport (avoid horizontal overflow at any width) ----- */
+[data-name="Nav Bar"],
+[data-name="Stats Row"],
+[data-name="Avant Apres Cols"],
+[data-name="Formation Cards"],
+[data-name="Pedagogy Blocks"],
+[data-name="Persona Cards"],
+[data-name="Testimonial Cards"],
+[data-name="Logos Financement"],
+[data-name="FAQ List"],
+[data-name="Filters Section"],
+[data-name="resultInfo"],
+[data-name="Pagination"],
+[data-name^="Row "],
+[data-name="Footer Top"],
+[data-name="footerNav"] {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ----- Inner cards keep equal heights inside grid parents ----- */
+[data-name="Formation Cards"] > *,
+[data-name="Persona Cards"] > *,
+[data-name="Testimonial Cards"] > *,
+[data-name="Pedagogy Blocks"] > *,
+[data-name="Avant Apres Cols"] > * {
+  align-self: stretch;
+}
+
+/* ----- Tablet & narrower desktop: shrink section padding, fluid widths ----- */
+@media (max-width: 1280px) {
+  /* Padded sections (those WITH a fill or visible padding in the .pen).
+     Pure structural wrappers ("Section X Wrapper") have no fill/padding and must
+     stay 100% wide so the colored child band reaches edge-to-edge. */
+  [data-name^="Hero Section"],
+  [data-name^="Section "]:not([data-name$="Wrapper"]),
+  [data-name="Catalogue Header"],
+  [data-name="Formation Grid"],
+  [data-name="Banner Sur Mesure"],
+  [data-name="Footer"],
+  [data-name="footer"],
+  [data-name="innerPourQui"],
+  [data-name="innerNewsletter"],
+  [data-name^="Part1"],
+  [data-name^="Part2"],
+  [data-name^="Part3"] {
+    padding-inline: clamp(24px, 5vw, 120px) !important;
+  }
+
+  /* Inner content rows take available width */
+  [data-name="Nav Bar"],
+  [data-name="Stats Row"],
+  [data-name="Avant Apres Cols"],
+  [data-name="Formation Cards"],
+  [data-name="Pedagogy Blocks"],
+  [data-name="Persona Cards"],
+  [data-name="Testimonial Cards"],
+  [data-name="Logos Financement"],
+  [data-name="FAQ List"],
+  [data-name="Section Header"],
+  [data-name="Filters Section"],
+  [data-name="resultInfo"],
+  [data-name="Pagination"],
+  [data-name^="Row "],
+  [data-name="Footer Top"],
+  [data-name="footerNav"] {
+    width: 100% !important;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  /* Hero video / demo placeholders fit viewport */
+  [data-name^="[CMS:"],
+  [data-name="Video Demo Placeholder"] {
+    width: 100% !important;
+    max-width: 900px;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* ----- Tablet: stack card grids vertically ----- */
+@media (max-width: 1024px) {
+  [data-name="Formation Cards"],
+  [data-name="Persona Cards"],
+  [data-name="Testimonial Cards"],
+  [data-name="Pedagogy Blocks"],
+  [data-name="Avant Apres Cols"],
+  [data-name="Logos Financement"],
+  [data-name^="Row "] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  [data-name="Formation Cards"] > *,
+  [data-name="Persona Cards"] > *,
+  [data-name="Testimonial Cards"] > *,
+  [data-name="Pedagogy Blocks"] > *,
+  [data-name="Avant Apres Cols"] > *,
+  [data-name^="Row "] > * {
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  /* Footer nav columns stack */
+  [data-name="Footer Top"] {
+    flex-direction: column !important;
+    gap: 32px !important;
+    align-items: flex-start !important;
+  }
+  [data-name="footerNav"] {
+    flex-wrap: wrap;
+    gap: 32px !important;
+  }
+}
+
+/* ----- Mobile ----- */
+@media (max-width: 768px) {
+  /* Hide nav links — keep logo + CTA */
+  [data-name="Nav Links"] { display: none !important; }
+  [data-name="Nav Bar"] {
+    padding: 0 8px 0 16px !important;
+    height: 48px !important;
+  }
+
+  /* Stack all flex rows that haven't already */
+  [data-name="Stats Row"],
+  [data-name="Hero CTAs"],
+  [data-name="Hero Badge"],
+  [data-name="Author"] {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  [data-name="Stats Row"],
+  [data-name="Hero CTAs"] {
+    flex-direction: column !important;
+  }
+
+  /* Reduce heavy hero/section paddings */
+  [data-name^="Hero Section"] {
+    padding: 48px 16px !important;
+  }
+  [data-name^="Section "]:not([data-name$="Wrapper"]),
+  [data-name="innerPourQui"],
+  [data-name="innerNewsletter"],
+  [data-name="Footer"],
+  [data-name="footer"] {
+    padding: 56px 16px !important;
+  }
+  [data-name^="Part1"],
+  [data-name^="Part2"],
+  [data-name^="Part3"] {
+    padding-inline: 16px !important;
+  }
+
+  /* Big titles scale down — match font-size patterns from the .pen */
+  span[style*="font-size: \"56px\""] { font-size: 40px !important; }
+  span[style*="font-size: \"42px\""] { font-size: 30px !important; }
+  span[style*="font-size: \"38px\""] { font-size: 26px !important; }
+  span[style*="font-size: \"32px\""] { font-size: 24px !important; }
+
+  /* Forms */
+  [data-name="Email Form"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Footer column stacking */
+  [data-name="footerNav"] {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+}

@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design artifacts (regenerable from of-v2.pen)
+/design/*_dump.txt
+/design/__pycache__/
+

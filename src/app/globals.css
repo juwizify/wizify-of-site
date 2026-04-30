@@ -1,26 +1,58 @@
 @import "tailwindcss";
+@import "./responsive.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Design tokens extraits de design/of-v2.pen */
+@theme {
+  /* Brand */
+  --color-brand: #3340FA;
+  --color-brand-hover: #4450FA;
+  --color-brand-100: #E8E9FF;
+  --color-brand-50: #F0F4FF;
+  --color-brand-200: #D6D9FE;
+
+  /* Neutrals */
+  --color-ink: #1A1A1A;       /* headings */
+  --color-text: #555555;       /* body */
+  --color-text-muted: #999999;
+  --color-text-faint: #CCCCCC;
+  --color-text-soft: #666666;
+  --color-line: #E8E9FF;       /* primary borders */
+  --color-line-2: #E2E8F0;
+  --color-line-3: #D1D5DB;
+  --color-surface: #F8F9FA;
+  --color-surface-2: #FAFBFC;
+  --color-chip: #F0F0F0;
+
+  /* Status */
+  --color-success: #1DC19D;
+  --color-warning: #F59E0B;
+  --color-danger: #FF6B6B;
+
+  /* Typography */
+  --font-sans: var(--font-poppins), "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Radii */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 28px;
+  --radius-pill: 58px;
+  --radius-section: 40px;
+
+  /* Shadows extraits */
+  --shadow-card: 0 0 24px rgb(0 0 0 / 0.063);
+  --shadow-card-soft: 0 0 12px rgb(0 0 0 / 0.031);
+  --shadow-mid: 0 0 17.5px rgb(0 0 0 / 0.082);
+  --shadow-hero: 0 0 70px rgb(0 0 0 / 0.251);
+  --shadow-section: 0 0 24px rgb(0 0 0 / 0.125);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  background: #FFFFFF;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
