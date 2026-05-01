@@ -227,7 +227,18 @@ export async function updateFormation(
   const next =
     typeof patch === "function"
       ? patch(current)
-      : ({ ...current, ...patch, _meta: { ...current._meta, updatedAt: new Date().toISOString() } } as Formation);
+      : ({
+          ...current,
+          ...patch,
+          // _meta merge order matters: current → patch → updatedAt.
+          // Without spreading `patch._meta` last, fields like `published`
+          // sent in the patch get clobbered by the older current._meta.
+          _meta: {
+            ...current._meta,
+            ...(patch._meta ?? {}),
+            updatedAt: new Date().toISOString(),
+          },
+        } as Formation);
   all[idx] = next;
   await writeFormations(all);
   return next;

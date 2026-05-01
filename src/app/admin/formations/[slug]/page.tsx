@@ -5,6 +5,7 @@ import { auditFormation, score } from "@/lib/qualiopi";
 import Gauge from "@/components/admin/Gauge";
 import CheckList from "@/components/admin/CheckList";
 import { Section, Field, TextArea, Select, Checkbox, Row } from "@/components/admin/Field";
+import SaveBar from "@/components/admin/SaveBar";
 import { saveFormation } from "./actions";
 
 export default async function FormationEdit({
@@ -211,17 +212,22 @@ export default async function FormationEdit({
           </Section>
 
           <Section title="Publication">
-            <Checkbox name="published" label="Publier cette formation sur le site public" defaultChecked={f._meta.published} />
+            <p className="text-xs text-zinc-600 leading-relaxed">
+              Tu peux publier à tout moment, même incomplète. Les champs Qualiopi non renseignés
+              s&apos;affichent publiquement avec un badge <span className="px-1.5 py-0.5 bg-amber-100 text-amber-900 rounded font-mono text-[11px]">À compléter</span>
+              {" "}(visible mais non bloquant).
+            </p>
+            {s.missing > 0 && (
+              <div className="rounded-md bg-amber-50 border border-amber-200 px-3 py-2 text-xs text-amber-900">
+                ⚠ {s.missing} champ{s.missing > 1 ? "s" : ""} Qualiopi non renseigné{s.missing > 1 ? "s" : ""}
+                {s.partial > 0 && ` (+ ${s.partial} partiel${s.partial > 1 ? "s" : ""})`} —
+                publication possible mais ces zones apparaîtront en jaune sur la fiche publique.
+              </div>
+            )}
+            <Checkbox name="published" label="Publier sur le site public" defaultChecked={f._meta.published} />
           </Section>
 
-          <div className="flex items-center gap-3 pt-2">
-            <button type="submit" className="rounded-md bg-zinc-900 text-white text-sm font-medium px-4 py-2 hover:bg-zinc-700 transition-colors">
-              Enregistrer
-            </button>
-            <Link href={`/formation/${f.slug}`} target="_blank" className="text-sm text-zinc-600 hover:text-zinc-900 underline">
-              Prévisualiser la fiche publique ↗
-            </Link>
-          </div>
+          <SaveBar previewHref={`/formation/${f.slug}`} updatedAt={f._meta.updatedAt} />
         </form>
 
         {/* SIDEBAR — checks */}

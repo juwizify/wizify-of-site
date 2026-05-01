@@ -35,6 +35,26 @@
   box-sizing: border-box;
 }
 
+/* ----- Hover affordances on interactive cards & filter chips ----- */
+[data-formation-card] {
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+[data-formation-card]:hover {
+  transform: translateY(-3px);
+  border-color: #3340FA !important;
+  box-shadow: 0 12px 32px rgba(51, 64, 250, 0.14) !important;
+}
+[data-filter-chip] {
+  transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
+}
+[data-filter-chip]:hover {
+  border-color: #3340FA !important;
+  color: #3340FA !important;
+}
+[data-filter-chip]:hover svg {
+  color: #3340FA !important;
+}
+
 /* ----- Inner cards keep equal heights inside grid parents ----- */
 [data-name="Formation Cards"] > *,
 [data-name="Persona Cards"] > *,
